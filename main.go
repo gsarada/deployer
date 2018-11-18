@@ -47,7 +47,7 @@ func (dplr *deployer) postWebHook(w http.ResponseWriter, r *http.Request) {
 	// This application only accepts containers placed under the
 	// `securingdevops` dockerhub organization. If this wasn't an
 	// example application, we would make the namespacing configurable
-	if hookData.Repository.Namespace != `securingdevops` {
+	if hookData.Repository.Namespace != `gsarada` {
 		httpError(w, http.StatusUnauthorized, "Invalid namespace")
 		return
 	}
@@ -63,7 +63,7 @@ func (dplr *deployer) postWebHook(w http.ResponseWriter, r *http.Request) {
 }
 
 func testAndDeploy() {
-	testFiles, err := filepath.Glob("/app/deploymentTests/*")
+	testFiles, err := filepath.Glob("/app/deploymentTests/test*")
 	if err != nil {
 		panic(err)
 	}
