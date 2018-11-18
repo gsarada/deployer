@@ -44,11 +44,11 @@ jobs:
            chmod +x deploymentTests/*;
            docker build -t ${DOCKER_REPO}/${CIRCLE_PROJECT_REPONAME} .;
          fi
-   - run:
-      name: Run GOVEND to check if outdated dependencies are present
-      command: |
-          cd ${GOPATH_BASE}/${CIRCLE_PROJECT_REPONAME} && \
-          govend -u && git diff --quiet
+   #- run:
+     # name: Run GOVEND to check if outdated dependencies are present
+      #command: |
+         # cd ${GOPATH_BASE}/${CIRCLE_PROJECT_REPONAME} && \
+          #govend -u && git diff --quiet
    - deploy:
        command: |
          if [ "${CIRCLE_BRANCH}" == "master" ]; then
