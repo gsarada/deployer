@@ -6,11 +6,11 @@ aws:
     accountnumber: 102356099710
 
 components:
-    - name: load-balancer
-      type: elb
-      tag:
-          key: elasticbeanstalk:environment-name
-          value: invoicer-env
+    #- name: load-balancer
+     # type: elb
+      #tag:
+       #   key: elasticbeanstalk:environment-name
+        #  value: invoicer-env
 
     - name: application
       type: ec2
@@ -32,10 +32,10 @@ components:
 
 rules:
     - src: 0.0.0.0/0
-      dst: load-balancer
-      dport: 443
+     # dst: load-balancer
+     # dport: 443
 
-    - src: load-balancer
+   #  - src: load-balancer
       dst: application
       dport: 80
 
