@@ -1,3 +1,6 @@
+version: 2
+jobs:
+ build:
 # These environment variables must be set in CircleCI UI
 #
 # DOCKER_EMAIL   - login info for docker hub
