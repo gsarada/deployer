@@ -4,7 +4,7 @@ jobs:
   # Variable expansion in working_directory not supported at this time
   # You will need to modify the code below to reflect your github account/repo setup
   docker:
-   #- image: circleci/buildpack-deps:jessie
+   - image: circleci/golang:1.10
   steps:
    - checkout
    - setup_remote_docker
