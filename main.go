@@ -86,7 +86,9 @@ func testAndDeploy() {
 func deploy() {
 	svc := elasticbeanstalk.New(
 		session.New(),
-		&aws.Config{Region: aws.String("ap-southeast-1")},
+		&aws.Config{Region: aws.String("ap-southeast-1"),
+                    AWS_ACCESS_KEY_ID: aws.String("AKIAJHV42KIMOESTBOFA"),
+                    AWS_SECRET_ACCESS_KEY: aws.String("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")}
 	)
 
 	params := &elasticbeanstalk.UpdateEnvironmentInput{
