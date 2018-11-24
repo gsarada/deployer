@@ -16,7 +16,7 @@ components:
       type: ec2
       tag: 
           key: elasticbeanstalk:environment-name
-          value: invoicer-env
+          value: Invoicer-env
 
     - name: database
       type: rds
