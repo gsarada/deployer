@@ -54,7 +54,7 @@ jobs:
       command: |
          docker pull mozilla/ssh_scan && \
          docker run -it mozilla/ssh_scan /app/bin/ssh_scan -t ${SERVER_IP} \
-         -P config/policies/mozilla_modern.yml
+         -P config/policies/mozilla_modern.yml -u
    - deploy:
        command: |
          if [ "${CIRCLE_BRANCH}" == "master" ]; then
